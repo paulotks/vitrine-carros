@@ -1,0 +1,7 @@
+<section>
+  <div>
+    <ul *ngFor="let car of cars">
+      <li (click)="viewDataDetails(car.id)"> {{car.marca}} - {{car.modelo}} - {{car.ano}} R${{car.preco}}</li>
+    </ul>
+  </div>
+</section>

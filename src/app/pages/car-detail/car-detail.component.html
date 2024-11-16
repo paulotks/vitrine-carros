@@ -1,0 +1,10 @@
+<section>
+  <div *ngIf="car; else notFound">
+    <h1>{{car.marca}} {{car.modelo}}</h1>
+    <p>{{car.ano}}</p>
+    <p>{{car.preco}}</p>
+  </div>
+
+  <ng-template #notFound>
+  </ng-template>
+</section>
