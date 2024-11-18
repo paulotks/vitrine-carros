@@ -40,7 +40,7 @@
             ],
             "scripts": [],
             "stylePreprocessorOptions": {
-              "includePaths": ["./src/assets/styles", "node_modules/"]
+              "includePaths": ["./src/assets/styles", "./node_modules/"]
             }
           },
           "configurations": {

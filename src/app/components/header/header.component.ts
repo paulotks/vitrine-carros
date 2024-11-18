@@ -20,6 +20,7 @@ const MENU_ITEMS = [
   },
   {
     label: 'Encontrar loja',
+    icon: 'pi pi-thumbtack',
   },
 ];
 

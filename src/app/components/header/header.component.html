@@ -1,7 +1,7 @@
 <header>
   <p-menubar [model]="menuItems">
     <ng-template pTemplate="start">
-      <img class="logo" width="135.2" height="64" ngSrc="/assets/imgs/logo.jpeg" alt="">
+      <img class="logo" width="135.2" height="64" ngSrc="/assets/imgs/logo.jpeg" alt="" priority>
     </ng-template>
 
     <ng-template pTemplate="item" let-item let-root="root">
@@ -16,7 +16,7 @@
 
     <ng-template pTemplate="end">
       <div class="flex align-items-center gap-2 pl-4">
-        <input type="text" pInputText placeholder="Busque por marca ou modelo" class="w-8rem md:w-12" />
+        <input type="text" pInputText placeholder="Busque por marca ou modelo" class="w-full " />
       </div>
     </ng-template>
 
