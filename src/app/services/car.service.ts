@@ -11,7 +11,7 @@ export class CarService {
     return CAR_MOCK.response;
   }
 
-  getCarById(id: number) {
+  getCarById(id: string) {
     return CAR_MOCK.response.find((car) => car.id === id);
   }
 }

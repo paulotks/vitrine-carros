@@ -1,0 +1,18 @@
+.logo {
+  border-radius: 10% / 50%;
+}
+
+::ng-deep .p-menubar {
+  p-menubarsub {
+    order: 3;
+  }
+
+  .p-menubar-end {
+    flex: 1 1 auto;
+
+    // .p-inputtext {
+    //   margin-left: 0.5rem;
+    //   width: 100% !important;
+    // }
+  }
+}

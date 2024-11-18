@@ -1,13 +1,9 @@
 @import "variables.scss";
 
 .global-container {
-  max-width: $container-max-width;
   min-width: $container-min-width;
-  margin: 0 auto;
-  padding: 0 $container-padding;
 
   @media (max-width: 768px) {
     max-width: 100%;
-    padding: 0 8px;
   }
 }

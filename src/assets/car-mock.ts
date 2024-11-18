@@ -3,7 +3,7 @@ import { ApiCarResponse } from '../app/interfaces/car-data-interface';
 export const CAR_MOCK: ApiCarResponse = {
   response: [
     {
-      id: 1,
+      id: 'A1',
       aceitaTroca: 'Sim',
       unicoDono: 'Não',
       cor: 'Prata',

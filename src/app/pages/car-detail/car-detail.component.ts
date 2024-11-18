@@ -17,7 +17,10 @@ export class CarDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private carService: CarService) {}
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    const id = this.route.snapshot.paramMap.get('id');
+    if (!id) {
+      return console.error('Carro Não encontrado');
+    }
     this.car = this.carService.getCarById(id);
 
     if (!this.car) return console.error('Carro não encontrado!');

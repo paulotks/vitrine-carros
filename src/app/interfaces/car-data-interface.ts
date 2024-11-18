@@ -4,7 +4,7 @@ interface Image {
 }
 
 export interface Car {
-  id: number;
+  id: string;
   aceitaTroca: string;
   unicoDono: string;
   cor: string;
