@@ -34,13 +34,13 @@ export class HeaderComponent implements OnInit {
       {
         label: 'Home',
         command: () => {
-          this.router.navigate(['']);
+          this.router.navigate(['/']);
         },
       },
       {
         label: 'Vender',
         command: () => {
-          this.router.navigate(['']);
+          this.router.navigate(['/']);
         },
       },
       {
@@ -54,5 +54,9 @@ export class HeaderComponent implements OnInit {
         icon: 'pi pi-thumbtack',
       },
     ];
+  }
+
+  navigateToHome(): void {
+    this.router.navigate(['/']);
   }
 }

@@ -1,7 +1,7 @@
 <header>
   <p-menubar [model]="menuItems">
     <ng-template pTemplate="start">
-      <img class="logo" width="135.2" height="64" ngSrc="/assets/imgs/logo.jpeg" alt="" priority>
+      <img (click)="navigateToHome()" class="logo" width="135.2" height="64" ngSrc="/assets/imgs/logo.jpeg" alt="" priority>
     </ng-template>
 
     <ng-template pTemplate="item" let-item let-root="root">

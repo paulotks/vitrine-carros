@@ -1,7 +1,11 @@
 <section>
   <div>
     <ul *ngFor="let car of cars$ | async">
-      <li (click)="viewDataDetails(car.id)"> {{car.marca}} - {{car.modelo}} - {{car.ano}} R${{car.preco}}</li>
+      <li (click)="viewDataDetails(car.id)"> {{car.marca}} - {{car.modelo}} - {{car.ano}} R${{car.preco}}
+
+        <img width="300px" src={{car.imagens[0].url}} alt="">
+
+      </li>
     </ul>
   </div>
 </section>
