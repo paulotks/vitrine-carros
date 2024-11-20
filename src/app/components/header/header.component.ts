@@ -7,22 +7,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { InputTextModule } from 'primeng/inputtext';
 import { CommonModule } from '@angular/common';
 import { RippleModule } from 'primeng/ripple';
-
-const MENU_ITEMS = [
-  {
-    label: 'Home',
-  },
-  {
-    label: 'Vender',
-  },
-  {
-    label: 'Comprar',
-  },
-  {
-    label: 'Encontrar loja',
-    icon: 'pi pi-thumbtack',
-  },
-];
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -42,7 +27,32 @@ const MENU_ITEMS = [
 export class HeaderComponent implements OnInit {
   menuItems: MenuItem[] | undefined;
 
+  constructor(private router: Router) {}
+
   ngOnInit(): void {
-    this.menuItems = MENU_ITEMS;
+    this.menuItems = [
+      {
+        label: 'Home',
+        command: () => {
+          this.router.navigate(['']);
+        },
+      },
+      {
+        label: 'Vender',
+        command: () => {
+          this.router.navigate(['']);
+        },
+      },
+      {
+        label: 'Comprar',
+        command: () => {
+          this.router.navigate(['/ofertas']);
+        },
+      },
+      {
+        label: 'Encontrar loja',
+        icon: 'pi pi-thumbtack',
+      },
+    ];
   }
 }

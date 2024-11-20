@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CarService } from '../../services/car.service';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable, switchMap } from 'rxjs';
+import { Car } from '../../interfaces/car-data-interface';
 
 @Component({
   selector: 'app-car-list',
@@ -10,14 +13,25 @@ import { CommonModule } from '@angular/common';
   styleUrl: './car-list.component.scss',
 })
 export class CarListComponent implements OnInit {
-  cars: any[] = [];
+  cars$!: Observable<Car[]>;
+  selectedId!: string | null;
+  cars!: Car[];
 
-  constructor(private carService: CarService) {}
+  constructor(
+    private carService: CarService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
   ngOnInit(): void {
-    this.cars = this.carService.getCars();
+    this.cars$ = this.route.paramMap.pipe(
+      switchMap((params) => {
+        this.selectedId = params.get('id');
+        return this.carService.getCars();
+      })
+    );
   }
 
-  viewDataDetails(id: number) {
-    window.location.href = `/car/${id}`;
+  viewDataDetails(id: string) {
+    this.router.navigate([`/ofertas/car/${id}`]);
   }
 }

@@ -1,6 +1,6 @@
 <section>
   <div>
-    <ul *ngFor="let car of cars">
+    <ul *ngFor="let car of cars$ | async">
       <li (click)="viewDataDetails(car.id)"> {{car.marca}} - {{car.modelo}} - {{car.ano}} R${{car.preco}}</li>
     </ul>
   </div>

@@ -1,8 +1,10 @@
 import { CarService } from '../../services/car.service';
 import { Component, OnInit } from '@angular/core';
 import { Car } from '../../interfaces/car-data-interface';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-car-detail',
@@ -12,17 +14,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './car-detail.component.scss',
 })
 export class CarDetailComponent implements OnInit {
-  car: Car | undefined;
+  car$!: Observable<Car>;
 
   constructor(private route: ActivatedRoute, private carService: CarService) {}
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    if (!id) {
-      return console.error('Carro Não encontrado');
-    }
-    this.car = this.carService.getCarById(id);
+    const carId = this.route.snapshot.paramMap.get('id');
 
-    if (!this.car) return console.error('Carro não encontrado!');
+    if (!carId) {
+      return console.error('Carro não encontrado');
+    }
+    this.car$ = this.carService.getCarById(carId);
   }
 }
