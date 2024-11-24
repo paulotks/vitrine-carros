@@ -1,8 +1,8 @@
 <div class="card">
-  <p-dataView *ngIf="(cars$ | async) as cars; else loadingList" #dv [value]="cars" [layout]="layout">
+  <p-dataView *ngIf="(cars$ | async) as cars; else loadingList" #dv [value]="cars" [layout]="layout" [rows]="rows" [paginator]="true" [totalRecords]="totalRecords" (onPage)="onPageChange($event)">
     <ng-template let-product pTemplate="grid" let-products>
       <div class="grid grid-nogutter">
-        <div class="car-card col-12 sm:col-6 md:col-4 xl:col-4 p-2" *ngFor="let product of cars">
+        <div class="car-card col-12 sm:col-6 md:col-4 xl:col-4 p-2" *ngFor="let product of displayedCars">
           <div (click)="viewDataDetails(product.id)" class="p-4 border-1 surface-border surface-card border-round flex flex-column">
             <div class="surface-50 flex justify-content-center border-round p-3">
               <div class="relative mx-auto">
@@ -23,7 +23,6 @@
                 <span>{{ product.combustivel }}</span>
                 <p-divider class="divider" type="solid" layout="vertical" />
                 <span>{{ product.quilometragem }} km</span>
-
               </div>
 
               <div class="flex flex-column gap-4 mt-4">

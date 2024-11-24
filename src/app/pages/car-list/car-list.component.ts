@@ -10,6 +10,7 @@ import { RatingModule } from 'primeng/rating';
 import { ButtonModule } from 'primeng/button';
 import { SkeletonModule } from 'primeng/skeleton';
 import { DividerModule } from 'primeng/divider';
+import { PaginatorModule, PaginatorState } from 'primeng/paginator';
 
 @Component({
   selector: 'app-car-list',
@@ -22,6 +23,7 @@ import { DividerModule } from 'primeng/divider';
     CommonModule,
     SkeletonModule,
     DividerModule,
+    PaginatorModule,
   ],
   templateUrl: './car-list.component.html',
   styleUrl: './car-list.component.scss',
@@ -29,8 +31,13 @@ import { DividerModule } from 'primeng/divider';
 export class CarListComponent implements OnInit {
   layout: 'list' | 'grid' = 'grid';
 
-  cars$!: Observable<Car[]>;
   selectedId!: string | null;
+  cars$!: Observable<Car[]>;
+  cars!: Car[];
+  displayedCars: Car[] = [];
+  totalRecords: number = 0;
+  first: number = 0;
+  rows: number = 6;
 
   constructor(
     private carService: CarService,
@@ -41,9 +48,25 @@ export class CarListComponent implements OnInit {
     this.cars$ = this.route.paramMap.pipe(
       switchMap((params) => {
         this.selectedId = params.get('id');
-        return this.carService.getCars().pipe(delay(2000)); //delay para testar loading
+        return this.carService.getCars().pipe(delay(2000)); //delay para testar
       })
     );
+
+    this.cars$.subscribe((cars) => {
+      this.cars = cars;
+      this.totalRecords = cars.length;
+      this.updateDisplayedCars(0, this.rows);
+    });
+  }
+
+  updateDisplayedCars(firts: number, rows: number) {
+    this.displayedCars = this.cars.slice(firts, firts + rows);
+  }
+
+  onPageChange(event: PaginatorState) {
+    const first = event.first ?? 0;
+    const rows = event.rows ?? this.rows;
+    this.updateDisplayedCars(first, rows);
   }
 
   viewDataDetails(id: string) {
@@ -52,21 +75,5 @@ export class CarListComponent implements OnInit {
 
   counterArray(n: number): any[] {
     return Array(n);
-  }
-
-  getSeverity(product: any) {
-    switch (product.inventoryStatus) {
-      case 'INSTOCK':
-        return 'success';
-
-      case 'LOWSTOCK':
-        return 'warning';
-
-      case 'OUTOFSTOCK':
-        return 'danger';
-
-      default:
-        return null;
-    }
   }
 }
