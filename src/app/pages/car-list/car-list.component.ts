@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CarService } from '../../services/car.service';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
-import { delay, Observable, switchMap } from 'rxjs';
-import { Car, Product } from '../../interfaces/car-data-interface';
+import { Router } from '@angular/router';
+import { BehaviorSubject, combineLatest, map, Observable } from 'rxjs';
+import { Car } from '../../interfaces/car-data-interface';
 import { DataViewModule } from 'primeng/dataview';
 import { TagModule } from 'primeng/tag';
 import { RatingModule } from 'primeng/rating';
@@ -31,42 +31,40 @@ import { PaginatorModule, PaginatorState } from 'primeng/paginator';
 export class CarListComponent implements OnInit {
   layout: 'list' | 'grid' = 'grid';
 
-  selectedId!: string | null;
   cars$!: Observable<Car[]>;
-  cars!: Car[];
-  displayedCars: Car[] = [];
+  displayedCars$!: Observable<Car[]>;
   totalRecords: number = 0;
   first: number = 0;
   rows: number = 6;
 
-  constructor(
-    private carService: CarService,
-    private router: Router,
-    private route: ActivatedRoute
-  ) {}
+  private pageChange$ = new BehaviorSubject<{ first: number; rows: number }>({
+    first: 0,
+    rows: 6,
+  });
+
+  constructor(private carService: CarService, private router: Router) {}
   ngOnInit(): void {
-    this.cars$ = this.route.paramMap.pipe(
-      switchMap((params) => {
-        this.selectedId = params.get('id');
-        return this.carService.getCars().pipe(delay(2000)); //delay para testar
+    this.cars$ = this.carService.getCars().pipe(
+      map((cars) => {
+        this.totalRecords = cars.length;
+        return cars;
       })
     );
 
-    this.cars$.subscribe((cars) => {
-      this.cars = cars;
-      this.totalRecords = cars.length;
-      this.updateDisplayedCars(0, this.rows);
-    });
+    this.updateDisplayedCars();
   }
 
-  updateDisplayedCars(firts: number, rows: number) {
-    this.displayedCars = this.cars.slice(firts, firts + rows);
+  updateDisplayedCars() {
+    this.displayedCars$ = combineLatest([this.cars$, this.pageChange$]).pipe(
+      map(([cars, pagination]) => {
+        const { first, rows } = pagination;
+        return cars.slice(first, first + rows);
+      })
+    );
   }
 
-  onPageChange(event: PaginatorState) {
-    const first = event.first ?? 0;
-    const rows = event.rows ?? this.rows;
-    this.updateDisplayedCars(first, rows);
+  onPageChange(event: { first: number; rows: number }) {
+    this.pageChange$.next(event);
   }
 
   viewDataDetails(id: string) {

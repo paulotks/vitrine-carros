@@ -1,6 +1,6 @@
-import { ApiCarResponse } from '../app/interfaces/car-data-interface';
+// import { ApiCarResponse } from '../app/interfaces/car-data-interface';
 
-export const CAR_MOCK: ApiCarResponse = {
+export const CAR_MOCK: any = {
   response: [
     {
       id: 'A1',

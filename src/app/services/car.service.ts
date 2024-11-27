@@ -40,6 +40,8 @@ export class CarService {
   }
 
   getCarById(id: string): Observable<Car> {
-    return of(CAR_MOCK.response.find((car) => car.id === id) ?? DEFAULT_CAR);
+    return of(
+      CAR_MOCK.response.find((car: Car) => car.id === id) ?? DEFAULT_CAR
+    );
   }
 }

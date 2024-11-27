@@ -1,0 +1,429 @@
+{
+  "response": [
+    {
+      "id": "A1",
+      "aceitaTroca": "Sim",
+      "unicoDono": "Não",
+      "cor": "Prata",
+      "ipvaPago": "Não",
+      "finalPlaca": 1,
+      "marca": "Volkswagen",
+      "ano": 2017,
+      "modelo": "Gol",
+      "combustivel": "Gasolina",
+      "preco": 58000,
+      "quilometragem": 80000,
+      "cambio": "Manual",
+      "imagens": [
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        },
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787921/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        }
+      ]
+    },
+    {
+      "id": "A2",
+      "aceitaTroca": "Não",
+      "unicoDono": "Sim",
+      "cor": "Vermelho",
+      "ipvaPago": "Sim",
+      "finalPlaca": 8,
+      "marca": "Chevrolet",
+      "ano": 2020,
+      "modelo": "Onix",
+      "combustivel": "Flex",
+      "preco": 70000,
+      "quilometragem": 25000,
+      "cambio": "Automático",
+      "imagens": [
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Chevrolet_Onix_Flex",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        },
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Chevrolet_Onix_Flex",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        }
+      ]
+    },
+    {
+      "id": "A3",
+      "aceitaTroca": "Sim",
+      "unicoDono": "Não",
+      "cor": "Preto",
+      "ipvaPago": "Sim",
+      "finalPlaca": 5,
+      "marca": "Toyota",
+      "ano": 2018,
+      "modelo": "Corolla",
+      "combustivel": "Híbrido",
+      "preco": 90000,
+      "quilometragem": 60000,
+      "cambio": "Automático",
+      "imagens": [
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Toyota_Corolla_Hibrido",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        },
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Toyota_Corolla_Hibrido",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "aceitaTroca": "Sim",
+      "unicoDono": "Não",
+      "cor": "Prata",
+      "ipvaPago": "Não",
+      "finalPlaca": 1,
+      "marca": "Volkswagen",
+      "ano": 2017,
+      "modelo": "Gol",
+      "combustivel": "Gasolina",
+      "preco": 58000,
+      "quilometragem": 80000,
+      "cambio": "Manual",
+      "imagens": [
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        },
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787921/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "aceitaTroca": "Sim",
+      "unicoDono": "Não",
+      "cor": "Prata",
+      "ipvaPago": "Não",
+      "finalPlaca": 1,
+      "marca": "Volkswagen",
+      "ano": 2017,
+      "modelo": "Gol",
+      "combustivel": "Gasolina",
+      "preco": 58000,
+      "quilometragem": 80000,
+      "cambio": "Manual",
+      "imagens": [
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        },
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787921/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "aceitaTroca": "Sim",
+      "unicoDono": "Não",
+      "cor": "Prata",
+      "ipvaPago": "Não",
+      "finalPlaca": 1,
+      "marca": "Volkswagen",
+      "ano": 2017,
+      "modelo": "Gol",
+      "combustivel": "Gasolina",
+      "preco": 58000,
+      "quilometragem": 80000,
+      "cambio": "Manual",
+      "imagens": [
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        },
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787921/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "aceitaTroca": "Sim",
+      "unicoDono": "Não",
+      "cor": "Prata",
+      "ipvaPago": "Não",
+      "finalPlaca": 1,
+      "marca": "Volkswagen",
+      "ano": 2017,
+      "modelo": "Gol",
+      "combustivel": "Gasolina",
+      "preco": 58000,
+      "quilometragem": 80000,
+      "cambio": "Manual",
+      "imagens": [
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        },
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787921/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "aceitaTroca": "Sim",
+      "unicoDono": "Não",
+      "cor": "Prata",
+      "ipvaPago": "Não",
+      "finalPlaca": 1,
+      "marca": "Volkswagen",
+      "ano": 2017,
+      "modelo": "Gol",
+      "combustivel": "Gasolina",
+      "preco": 58000,
+      "quilometragem": 80000,
+      "cambio": "Manual",
+      "imagens": [
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        },
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787921/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "aceitaTroca": "Sim",
+      "unicoDono": "Não",
+      "cor": "Prata",
+      "ipvaPago": "Não",
+      "finalPlaca": 1,
+      "marca": "Volkswagen",
+      "ano": 2017,
+      "modelo": "Gol",
+      "combustivel": "Gasolina",
+      "preco": 58000,
+      "quilometragem": 80000,
+      "cambio": "Manual",
+      "imagens": [
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        },
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787921/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "aceitaTroca": "Sim",
+      "unicoDono": "Não",
+      "cor": "Prata",
+      "ipvaPago": "Não",
+      "finalPlaca": 1,
+      "marca": "Volkswagen",
+      "ano": 2017,
+      "modelo": "Gol",
+      "combustivel": "Gasolina",
+      "preco": 58000,
+      "quilometragem": 80000,
+      "cambio": "Manual",
+      "imagens": [
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        },
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787921/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "aceitaTroca": "Sim",
+      "unicoDono": "Não",
+      "cor": "Prata",
+      "ipvaPago": "Não",
+      "finalPlaca": 1,
+      "marca": "Volkswagen",
+      "ano": 2017,
+      "modelo": "Gol",
+      "combustivel": "Gasolina",
+      "preco": 58000,
+      "quilometragem": 80000,
+      "cambio": "Manual",
+      "imagens": [
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        },
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787921/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "aceitaTroca": "Sim",
+      "unicoDono": "Não",
+      "cor": "Prata",
+      "ipvaPago": "Não",
+      "finalPlaca": 1,
+      "marca": "Volkswagen",
+      "ano": 2017,
+      "modelo": "Gol",
+      "combustivel": "Gasolina",
+      "preco": 58000,
+      "quilometragem": 80000,
+      "cambio": "Manual",
+      "imagens": [
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        },
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787921/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "aceitaTroca": "Sim",
+      "unicoDono": "Não",
+      "cor": "Prata",
+      "ipvaPago": "Não",
+      "finalPlaca": 1,
+      "marca": "Volkswagen",
+      "ano": 2017,
+      "modelo": "Gol",
+      "combustivel": "Gasolina",
+      "preco": 58000,
+      "quilometragem": 80000,
+      "cambio": "Manual",
+      "imagens": [
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        },
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787921/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "aceitaTroca": "Sim",
+      "unicoDono": "Não",
+      "cor": "Prata",
+      "ipvaPago": "Não",
+      "finalPlaca": 1,
+      "marca": "Volkswagen",
+      "ano": 2017,
+      "modelo": "Gol",
+      "combustivel": "Gasolina",
+      "preco": 58000,
+      "quilometragem": 80000,
+      "cambio": "Manual",
+      "imagens": [
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        },
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787921/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "aceitaTroca": "Sim",
+      "unicoDono": "Não",
+      "cor": "Prata",
+      "ipvaPago": "Não",
+      "finalPlaca": 1,
+      "marca": "Volkswagen",
+      "ano": 2017,
+      "modelo": "Gol",
+      "combustivel": "Gasolina",
+      "preco": 58000,
+      "quilometragem": 80000,
+      "cambio": "Manual",
+      "imagens": [
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        },
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787921/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "aceitaTroca": "Sim",
+      "unicoDono": "Não",
+      "cor": "Prata",
+      "ipvaPago": "Não",
+      "finalPlaca": 1,
+      "marca": "Volkswagen",
+      "ano": 2017,
+      "modelo": "Gol",
+      "combustivel": "Gasolina",
+      "preco": 58000,
+      "quilometragem": 80000,
+      "cambio": "Manual",
+      "imagens": [
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        },
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787921/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "aceitaTroca": "Sim",
+      "unicoDono": "Não",
+      "cor": "Prata",
+      "ipvaPago": "Não",
+      "finalPlaca": 1,
+      "marca": "Volkswagen",
+      "ano": 2017,
+      "modelo": "Gol",
+      "combustivel": "Gasolina",
+      "preco": 58000,
+      "quilometragem": 80000,
+      "cambio": "Manual",
+      "imagens": [
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        },
+        {
+          "id": "cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina",
+          "url": "https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787921/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png"
+        }
+      ]
+    }
+  ]
+}
