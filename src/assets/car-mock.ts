@@ -23,7 +23,7 @@ export const CAR_MOCK: any = {
         },
         {
           id: 'cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina',
-          url: 'https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787921/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png',
+          url: 'https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png',
         },
       ],
     },

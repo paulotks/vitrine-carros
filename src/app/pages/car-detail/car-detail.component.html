@@ -1,10 +1,30 @@
-<section>
+<div class="card ">
   <div *ngIf="car$ | async as car; else notFound">
-    <h1>{{car.marca}} {{car.modelo}}</h1>
-    <p>{{car.ano}}</p>
-    <p>{{car.preco}}</p>
-  </div>
+    <div>
+      <p-carousel [value]="car.imagens" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+        <ng-template let-imagem pTemplate="item">
+          <div class="border-1 surface-border border-round m-2 p-3">
+            <div class="mb-3">
+              <div class="relative mx-auto">
+                <img [src]="imagem.url" [alt]="imagem.id" class="w-full border-round" />
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <div>
+      <p-card>
+        <h1>{{car.marca}} {{car.modelo}}</h1>
+        <p>{{car.ano}}</p>
+        <p>{{car.preco}}</p>
+      </p-card>
+    </div>
 
+
+
+
+  </div>
   <ng-template #notFound>
   </ng-template>
-</section>
+</div>
