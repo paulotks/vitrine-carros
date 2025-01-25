@@ -1,9 +1,9 @@
-<div class="card">
-  <div *ngIf="car$ | async as car; else notFound">
-    <div>
+<div class="container-grid" *ngIf="car$ | async as car; else notFound">
+  <div class="carousel">
+    <div class="galeria">
       <p-carousel [value]="car.imagens" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions">
         <ng-template let-imagem pTemplate="item">
-          <div class="border-1 surface-border border-round m-2 p-3">
+          <div>
             <div class="mb-3">
               <div class="relative mx-auto">
                 <img [src]="imagem.url" [alt]="imagem.id" class="w-full border-round" />
@@ -14,20 +14,59 @@
       </p-carousel>
     </div>
 
-    <div class="container-car-detail">
-      <h1>{{car.marca}} {{car.modelo}}</h1>
-      <p>Premier 1.2 turbo {{car.cambio}} - {{car.combustivel}}</p>
-      <p>{{car.cor}}</p>
-      <p>{{car.ano}}</p>
-      <div>
-        <p>R$</p>
-        <p>{{car.preco}}</p>
-      </div>
+  </div>
+  <div class="overview">
+    <ul>
+      <li>{{car.quilometragem}}</li>
+      <li>{{car.cambio}}</li>
+      <li>{{car.finalPlaca}}</li>
+      <li>{{car.ano}}</li>
+      <li>{{car.combustivel}}</li>
+      <li>{{car.cor}}</li>
+    </ul>
+  </div>
+  <div class="optionals">
+    <div>
+      <h2>Opcionais</h2>
+      <ul>
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="about">
+    <h2>Sobre esse carro</h2>
+  </div>
+
+  <div class="price-info">
+
+    <h1>{{car.marca}} {{car.modelo}}</h1>
+    <p>Premier 1.2 turbo {{car.cambio}} - {{car.combustivel}}</p>
+    <p>{{car.cor}}</p>
+    <p>{{car.ano}}</p>
+    <div>
+      <p>R$</p>
+      <p>{{car.preco}}</p>
     </div>
 
 
 
   </div>
-  <ng-template #notFound>
-  </ng-template>
+
+
+
+  <div class="promotional">
+    <h2>Baner promocional</h2>
+  </div>
+
+  <div class="similar-offers">
+    <h2>Ofertas Semelhantes</h2>
+    <p>Carroussel com algumas ofertas semelhantes</p>
+    <button>Ver todas as ofertas</button>
+  </div>
+
 </div>
+
+<ng-template #notFound>
+  <span>Pagina não encontrada</span>
+</ng-template>

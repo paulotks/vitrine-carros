@@ -4,7 +4,6 @@ import { Car } from '../../interfaces/car-data-interface';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
 import { TagModule } from 'primeng/tag';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';

@@ -1,0 +1,60 @@
+@import "variables.scss";
+
+.container-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template:
+    "carousel price-info"
+    "overview price-info"
+    "optionals price-info"
+    "about about"
+    "promotional promotional"
+    "similar-offers similar-offers"
+    /2fr 1fr;
+  gap: 16px;
+}
+
+.carousel {
+  grid-area: carousel;
+  width: 100%;
+  background-color: $background-color;
+  @include primeng-shadow;
+  border-radius: 0.8%;
+
+  .galeria {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.price-info {
+  grid-area: price-info;
+  position: sticky;
+  top: 16px;
+  // width: 600px;
+  height: 400px;
+  padding: 0 16px;
+  background-color: $background-color;
+  border-radius: 0.8%;
+  @include primeng-shadow;
+}
+
+.overview {
+  grid-area: overview;
+}
+
+.optionals {
+  grid-area: optionals;
+}
+
+.about {
+  grid-area: about;
+}
+
+.promotional {
+  grid-area: promotional;
+}
+
+.similar-offers {
+  grid-area: similar-offers;
+}

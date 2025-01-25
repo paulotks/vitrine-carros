@@ -19,11 +19,11 @@ export const CAR_MOCK: any = {
       imagens: [
         {
           id: 'cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina',
-          url: 'https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png',
+          url: 'https://s3.carro57.com.br/FC/11247/6225822_0_W_d810291724.jpg',
         },
         {
           id: 'cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina',
-          url: 'https://res.cloudinary.com/dixtmxvwe/image/upload/v1731787920/cliente1/xV7jqo1eDfTjR8KXQMV3/Volkswagen_Gol_Gasolina.png',
+          url: 'https://mkt.carrera.com.br/stock-images/115669-01-548079.jpg?withwebp',
         },
       ],
     },
