@@ -26,7 +26,7 @@ import { CardModule } from 'primeng/card';
   styleUrl: './car-detail.component.scss',
 })
 export class CarDetailComponent implements OnInit {
-  car$!: Observable<any>;
+  car$!: Observable<Car>;
 
   responsiveOptions: any[] | undefined;
 

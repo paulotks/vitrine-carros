@@ -1,4 +1,4 @@
-<div class="card ">
+<div class="card">
   <div *ngIf="car$ | async as car; else notFound">
     <div>
       <p-carousel [value]="car.imagens" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions">
@@ -13,14 +13,17 @@
         </ng-template>
       </p-carousel>
     </div>
-    <div>
-      <p-card>
-        <h1>{{car.marca}} {{car.modelo}}</h1>
-        <p>{{car.ano}}</p>
-        <p>{{car.preco}}</p>
-      </p-card>
-    </div>
 
+    <div class="container-car-detail">
+      <h1>{{car.marca}} {{car.modelo}}</h1>
+      <p>Premier 1.2 turbo {{car.cambio}} - {{car.combustivel}}</p>
+      <p>{{car.cor}}</p>
+      <p>{{car.ano}}</p>
+      <div>
+        <p>R$</p>
+        <p>{{car.preco}}</p>
+      </div>
+    </div>
 
 
 
