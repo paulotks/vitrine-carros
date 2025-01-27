@@ -10,8 +10,8 @@
     "about about"
     "promotional promotional"
     "similar-offers similar-offers"
-    /2fr 1fr;
-  gap: 16px;
+    /2.5fr 1fr;
+  gap: 32px;
 }
 
 .carousel {
@@ -22,7 +22,7 @@
   border-radius: 0.8%;
 
   .galeria {
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
   }
 }
@@ -33,10 +33,58 @@
   top: 16px;
   // width: 600px;
   height: 400px;
-  padding: 0 16px;
+  padding: 32px;
   background-color: $background-color;
   border-radius: 0.8%;
   @include primeng-shadow;
+
+  .title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      margin: 0;
+    }
+
+    i {
+      font-size: 1.8rem;
+    }
+  }
+
+  .price-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+
+    p {
+      font-size: $font-size-medium;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+
+      p {
+        font-size: $font-size-large;
+      }
+
+      p:first-child {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  p-button.buy-button {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    width: 100%;
+    width: calc(100% - 32px);
+    transform: translateX(0);
+    margin: 0 16px;
+  }
 }
 
 .overview {

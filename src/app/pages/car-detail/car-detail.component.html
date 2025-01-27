@@ -39,15 +39,20 @@
   </div>
 
   <div class="price-info">
-
-    <h1>{{car.marca}} {{car.modelo}}</h1>
-    <p>Premier 1.2 turbo {{car.cambio}} - {{car.combustivel}}</p>
-    <p>{{car.cor}}</p>
-    <p>{{car.ano}}</p>
-    <div>
-      <p>R$</p>
-      <p>{{car.preco}}</p>
+    <div class="title-box">
+      <h1>{{car.marca}} {{car.modelo}}</h1>
+      <i class="pi pi-share-alt"></i>
     </div>
+    <h3>{{car.ano}} | {{car.cambio}} - {{car.combustivel}}</h3>
+    <div class="price-box">
+      <p>Valor do veículo</p>
+      <div>
+        <p>R$</p>
+        <p>{{car.preco}}</p>
+      </div>
+    </div>
+
+    <p-button class="buy-button" label="Tenho interesse" />
 
 
 
