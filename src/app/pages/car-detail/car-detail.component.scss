@@ -36,8 +36,12 @@
 
 .price-info {
   grid-area: price-info;
+  position: -webkit-sticky;
   position: sticky;
+  top: 10px;
+  margin-bottom: 30px;
   height: 400px; //apagar isso aqui depois
+  
 
   .title-box {
     display: flex;

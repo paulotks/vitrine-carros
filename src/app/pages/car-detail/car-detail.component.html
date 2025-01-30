@@ -1,59 +1,62 @@
-<div class="container-grid" *ngIf="car$ | async as car; else notFound">
-  <div class="carousel">
-    <div class="galeria">
-      <p-carousel [value]="car.imagens" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions">
-        <ng-template let-imagem pTemplate="item">
-          <div>
-            <div class="mb-3">
-              <div class="relative mx-auto">
-                <img [src]="imagem.url" [alt]="imagem.id" class="w-full border-round" />
+<div *ngIf="car$ | async as car; else notFound">
+  <div class="container-grid">
+
+    <div class="carousel">
+      <div class="galeria">
+        <p-carousel [value]="car.imagens" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+          <ng-template let-imagem pTemplate="item">
+            <div>
+              <div class="mb-3">
+                <div class="relative mx-auto">
+                  <img [src]="imagem.url" [alt]="imagem.id" class="w-full border-round" />
+                </div>
               </div>
             </div>
-          </div>
-        </ng-template>
-      </p-carousel>
+          </ng-template>
+        </p-carousel>
+      </div>
+  
     </div>
-
-  </div>
-  <div class="overview">
-    <h2>Visão geral</h2>
-    <div class="overview-items">
-      <div>{{car.quilometragem}}</div>
-      <div>{{car.cambio}}</div>
-      <div>{{car.finalPlaca}}</div>
-      <div>{{car.ano}}</div>
-      <div>{{car.combustivel}}</div>
-      <div>{{car.cor}}</div>
-
+    <div class="overview">
+      <h2>Visão geral</h2>
+      <div class="overview-items">
+        <div>{{car.quilometragem}}</div>
+        <div>{{car.cambio}}</div>
+        <div>{{car.finalPlaca}}</div>
+        <div>{{car.ano}}</div>
+        <div>{{car.combustivel}}</div>
+        <div>{{car.cor}}</div>
+  
+      </div>
     </div>
-  </div>
-  <div class="optionals box-container">
-    <div>
-      <h2>Opcionais</h2>
-      <ul>
-
-      </ul>
+    <div class="optionals box-container">
+      <div>
+        <h2>Opcionais</h2>
+        <ul>
+  
+        </ul>
+      </div>
+    </div>
+  
+    <div class="price-info box-container">
+      <div class="title-box">
+        <h1>{{car.marca}} {{car.modelo}}</h1>
+        <i class="pi pi-share-alt"></i>
+      </div>
+      <h3>{{car.ano}} | {{car.cambio}} - {{car.combustivel}}</h3>
+      <div class="price-box">
+        <p>Valor do veículo</p>
+        <div>
+          <p>R$</p>
+          <p>{{car.preco}}</p>
+        </div>
+      </div>
+      <p-button class="buy-button" label="Tenho interesse" />
     </div>
   </div>
 
   <div class="about box-container">
     <h2>Sobre esse carro</h2>
-  </div>
-
-  <div class="price-info box-container">
-    <div class="title-box">
-      <h1>{{car.marca}} {{car.modelo}}</h1>
-      <i class="pi pi-share-alt"></i>
-    </div>
-    <h3>{{car.ano}} | {{car.cambio}} - {{car.combustivel}}</h3>
-    <div class="price-box">
-      <p>Valor do veículo</p>
-      <div>
-        <p>R$</p>
-        <p>{{car.preco}}</p>
-      </div>
-    </div>
-    <p-button class="buy-button" label="Tenho interesse" />
   </div>
 
   <div class="promotional box-container">
