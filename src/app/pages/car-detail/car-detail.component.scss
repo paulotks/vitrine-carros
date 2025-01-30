@@ -11,32 +11,33 @@
     "promotional promotional"
     "similar-offers similar-offers"
     /2.5fr 1fr;
-  gap: 32px;
+  gap: 10px;
 }
 
 .carousel {
   grid-area: carousel;
   width: 100%;
-  background-color: $background-color;
-  @include primeng-shadow;
-  border-radius: 0.8%;
+  background-color: #aaaaaa;
 
   .galeria {
     width: 75%;
+    padding-top: 10px;
     margin: 0 auto;
   }
+}
+
+.box-container {
+  top: 16px;
+  padding: 32px;
+  background-color: $background-color;
+  border-radius: 0.8%;
+  @include primeng-shadow;
 }
 
 .price-info {
   grid-area: price-info;
   position: sticky;
-  top: 16px;
-  // width: 600px;
-  height: 400px;
-  padding: 32px;
-  background-color: $background-color;
-  border-radius: 0.8%;
-  @include primeng-shadow;
+  height: 400px; //apagar isso aqui depois
 
   .title-box {
     display: flex;
@@ -88,7 +89,23 @@
 }
 
 .overview {
-  grid-area: overview;
+  h2 {
+    text-align: center;
+  }
+
+  .overview-items {
+    grid-area: overview;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    div {
+      flex: 1 1 calc(33% - 8px);
+      background-color: $box-color;
+      padding: 16px;
+      text-align: center;
+    }
+  }
 }
 
 .optionals {

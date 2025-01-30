@@ -16,16 +16,18 @@
 
   </div>
   <div class="overview">
-    <ul>
-      <li>{{car.quilometragem}}</li>
-      <li>{{car.cambio}}</li>
-      <li>{{car.finalPlaca}}</li>
-      <li>{{car.ano}}</li>
-      <li>{{car.combustivel}}</li>
-      <li>{{car.cor}}</li>
-    </ul>
+    <h2>Visão geral</h2>
+    <div class="overview-items">
+      <div>{{car.quilometragem}}</div>
+      <div>{{car.cambio}}</div>
+      <div>{{car.finalPlaca}}</div>
+      <div>{{car.ano}}</div>
+      <div>{{car.combustivel}}</div>
+      <div>{{car.cor}}</div>
+
+    </div>
   </div>
-  <div class="optionals">
+  <div class="optionals box-container">
     <div>
       <h2>Opcionais</h2>
       <ul>
@@ -34,11 +36,11 @@
     </div>
   </div>
 
-  <div class="about">
+  <div class="about box-container">
     <h2>Sobre esse carro</h2>
   </div>
 
-  <div class="price-info">
+  <div class="price-info box-container">
     <div class="title-box">
       <h1>{{car.marca}} {{car.modelo}}</h1>
       <i class="pi pi-share-alt"></i>
@@ -51,20 +53,14 @@
         <p>{{car.preco}}</p>
       </div>
     </div>
-
     <p-button class="buy-button" label="Tenho interesse" />
-
-
-
   </div>
 
-
-
-  <div class="promotional">
+  <div class="promotional box-container">
     <h2>Baner promocional</h2>
   </div>
 
-  <div class="similar-offers">
+  <div class="similar-offers box-container">
     <h2>Ofertas Semelhantes</h2>
     <p>Carroussel com algumas ofertas semelhantes</p>
     <button>Ver todas as ofertas</button>
