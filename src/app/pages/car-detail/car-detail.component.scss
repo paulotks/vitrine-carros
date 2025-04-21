@@ -6,7 +6,6 @@
   grid-template:
     "carousel price-info"
     "overview price-info"
-    "optionals price-info"
     "about about"
     "promotional promotional"
     "similar-offers similar-offers"
@@ -16,14 +15,9 @@
 
 .carousel {
   grid-area: carousel;
-  width: 100%;
-  background-color: #aaaaaa;
+  width: 75%;
+  margin: 0 auto;
 
-  .galeria {
-    width: 75%;
-    padding-top: 10px;
-    margin: 0 auto;
-  }
 }
 
 .box-container {
@@ -41,7 +35,7 @@
   top: 10px;
   margin-bottom: 30px;
   height: 400px; //apagar isso aqui depois
-  
+
 
   .title-box {
     display: flex;
@@ -85,11 +79,15 @@
     position: absolute;
     bottom: 16px;
     left: 0;
-    width: 100%;
     width: calc(100% - 32px);
     transform: translateX(0);
     margin: 0 16px;
   }
+}
+
+.center-tabs ::ng-deep .p-tabview-nav {
+  display: flex;
+  justify-content: center;
 }
 
 .overview {
@@ -103,17 +101,38 @@
     flex-wrap: wrap;
     gap: 8px;
 
-    div {
+    .overview-item {
       flex: 1 1 calc(33% - 8px);
       background-color: $box-color;
       padding: 16px;
       text-align: center;
+
+      .item-organization {
+        padding-top: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .icon-resume-car {
+        width: 24px; // Tamanho base para dispositivos padrão
+        height: 24px; // Opcional, para manter proporção
+        @media (max-width: 768px) {
+          width: 20px; // Ajuste para dispositivos menores
+          height: 20px;
+        }
+        @media (max-width: 480px) {
+          width: 16px; // Ajuste para dispositivos muito pequenos
+          height: 16px;
+        }
+      }
     }
   }
 }
 
 .optionals {
-  grid-area: optionals;
+  min-height: 10em;
 }
 
 .about {

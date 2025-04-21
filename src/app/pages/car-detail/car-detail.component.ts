@@ -9,6 +9,7 @@ import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { ImageModule } from 'primeng/image';
 import { CardModule } from 'primeng/card';
+import { TabViewModule } from 'primeng/tabview';
 
 @Component({
   selector: 'app-car-detail',
@@ -20,6 +21,7 @@ import { CardModule } from 'primeng/card';
     TagModule,
     ImageModule,
     CardModule,
+    TabViewModule,
   ],
   templateUrl: './car-detail.component.html',
   styleUrl: './car-detail.component.scss',

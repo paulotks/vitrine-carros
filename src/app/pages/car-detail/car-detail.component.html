@@ -1,44 +1,78 @@
 <div *ngIf="car$ | async as car; else notFound">
-  <div class="container-grid">
 
+  <div class="container-grid">
     <div class="carousel">
-      <div class="galeria">
-        <p-carousel [value]="car.imagens" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+        <p-carousel [value]="car.imagens" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions" circular="true" autoplayInterval="3000" autoplayTimeout="3000" autoplay="true">
           <ng-template let-imagem pTemplate="item">
-            <div>
               <div class="mb-3">
                 <div class="relative mx-auto">
                   <img [src]="imagem.url" [alt]="imagem.id" class="w-full border-round" />
                 </div>
               </div>
-            </div>
           </ng-template>
         </p-carousel>
-      </div>
-  
     </div>
-    <div class="overview">
-      <h2>Visão geral</h2>
-      <div class="overview-items">
-        <div>{{car.quilometragem}}</div>
-        <div>{{car.cambio}}</div>
-        <div>{{car.finalPlaca}}</div>
-        <div>{{car.ano}}</div>
-        <div>{{car.combustivel}}</div>
-        <div>{{car.cor}}</div>
-  
-      </div>
-    </div>
-    <div class="optionals box-container">
-      <div>
-        <h2>Opcionais</h2>
-        <ul>
-  
-        </ul>
-      </div>
-    </div>
-  
-    <div class="price-info box-container">
+
+    <p-tabView class="center-tabs">
+      <p-tabPanel header="Visão Geral">
+        <section class="overview">
+          <div class="overview-items">
+            <div class="overview-item">
+              <span>Quilometragem</span>
+              <div class="item-organization">
+                <img class="icon-resume-car" src="./assets/icons/car-driving-on-road-icon.svg" alt="">
+                <span>{{car.quilometragem}} km</span>
+              </div>
+            </div>
+            <div class="overview-item">
+              <span>Câmbio</span>
+              <div class="item-organization">
+                <img class="icon-resume-car" src="./assets/icons/manual-transmission-icon.svg" alt="">
+                <span>{{car.cambio}}</span>
+              </div>
+            </div>
+            <div class="overview-item">
+              <span>Final da Placa</span>
+              <div class="item-organization">
+                <img class="icon-resume-car" src="./assets/icons/license-plate-icon.svg" alt="">
+                <span>{{car.finalPlaca}}</span>
+              </div>
+            </div>
+            <div class="overview-item">
+              <span>Ano</span>
+              <div class="item-organization">
+                <img class="icon-resume-car" src="./assets/icons/date-icon.svg" alt="">
+                <span>{{car.ano}}</span>
+              </div>
+            </div>
+            <div class="overview-item">
+              <span>Combustível</span>
+              <div class="item-organization">
+                <img class="icon-resume-car" src="./assets/icons/gas-pump-icon.svg" alt="">
+                <span>{{car.combustivel}}</span>
+              </div>
+            </div>
+            <div class="overview-item">
+              <span>Cor</span>
+              <div class="item-organization">
+                <img class="icon-resume-car" src="./assets/icons/circle-svgrepo-com.svg" alt="">
+                <span>{{car.cor}}</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </p-tabPanel>
+      <p-tabPanel header="Opcionais">
+        <section class="optionals">
+
+        </section>
+
+      </p-tabPanel>
+    </p-tabView>
+
+
+
+    <section class="price-info box-container">
       <div class="title-box">
         <h1>{{car.marca}} {{car.modelo}}</h1>
         <i class="pi pi-share-alt"></i>
@@ -52,22 +86,22 @@
         </div>
       </div>
       <p-button class="buy-button" label="Tenho interesse" />
-    </div>
+    </section>
   </div>
 
-  <div class="about box-container">
+  <section class="about box-container">
     <h2>Sobre esse carro</h2>
-  </div>
+  </section>
 
-  <div class="promotional box-container">
+  <section class="promotional box-container">
     <h2>Baner promocional</h2>
-  </div>
+  </section>
 
-  <div class="similar-offers box-container">
+  <section class="similar-offers box-container">
     <h2>Ofertas Semelhantes</h2>
-    <p>Carroussel com algumas ofertas semelhantes</p>
+    <p>Caroussel com algumas ofertas semelhantes</p>
     <button>Ver todas as ofertas</button>
-  </div>
+  </section>
 
 </div>
 
