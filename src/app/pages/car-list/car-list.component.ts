@@ -10,7 +10,8 @@ import { RatingModule } from 'primeng/rating';
 import { ButtonModule } from 'primeng/button';
 import { SkeletonModule } from 'primeng/skeleton';
 import { DividerModule } from 'primeng/divider';
-import { PaginatorModule, PaginatorState } from 'primeng/paginator';
+import { PaginatorModule } from 'primeng/paginator';
+import { AccordionModule } from 'primeng/accordion';
 
 @Component({
   selector: 'app-car-list',
@@ -24,6 +25,7 @@ import { PaginatorModule, PaginatorState } from 'primeng/paginator';
     SkeletonModule,
     DividerModule,
     PaginatorModule,
+    AccordionModule
   ],
   templateUrl: './car-list.component.html',
   styleUrl: './car-list.component.scss',

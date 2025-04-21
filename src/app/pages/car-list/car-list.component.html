@@ -1,64 +1,90 @@
-<section class="card">
-  <p-dataView *ngIf="(cars$ | async) as products; else loadingList" [value]="products" [layout]="layout" [rows]="rows" [totalRecords]="totalRecords" [paginator]="true" (onPage)="onPageChange($event)">
-    <ng-template let-product pTemplate="grid" let-products>
-      <div class="grid grid-nogutter">
-        <div class="car-card col-12 sm:col-6 md:col-4 xl:col-4 p-2" *ngFor="let product of products">
-          <div (click)="viewDataDetails(product.id)" class="p-4 border-1 surface-border surface-card border-round flex flex-column">
-            <div class="surface-50 flex justify-content-center border-round p-3">
-              <div class="relative mx-auto">
-                <img class="border-round w-full" [src]="product.imagens[0].url" [alt]="product.modelo" style="max-width: 300px;" />
-              </div>
-            </div>
-            <div class="pt-4">
-              <div class="flex flex-row justify-content-between align-items-start gap-2">
-                <div>
-                  <span class="font-medium text-secondary text-sm">{{ product.marca }}</span>
-                  <div class="text-lg font-medium text-900 mt-1">{{ product.modelo }}</div>
+
+<div class="list-container">
+  <section class="filter-container">
+    <h3 class="filter-title">Filtros</h3>
+    <p-accordion>
+      <p-accordionTab header="Marcas">
+      </p-accordionTab>
+      <p-accordionTab header="Modelos">
+      </p-accordionTab>
+      <p-accordionTab header="Ano">
+      </p-accordionTab>
+      <p-accordionTab header="Km">
+      </p-accordionTab>
+      <p-accordionTab header="Preço">
+      </p-accordionTab>
+      <p-accordionTab header="Câmbio">
+      </p-accordionTab>
+      <p-accordionTab header="Cor">
+      </p-accordionTab>
+      <p-accordionTab header="Combustível">
+      </p-accordionTab>
+    </p-accordion>
+  </section>
+  <section class="card">
+    <p-dataView *ngIf="(cars$ | async) as products; else loadingList" [value]="products" [layout]="layout" [rows]="rows" [totalRecords]="totalRecords" [paginator]="true" (onPage)="onPageChange($event)">
+      <ng-template let-product pTemplate="grid" let-products>
+        <div class="grid grid-nogutter">
+          <div class="car-card col-12 sm:col-6 md:col-4 xl:col-4 p-2" *ngFor="let product of products">
+            <div (click)="viewDataDetails(product.id)" class="p-4 border-1 surface-border surface-card border-round flex flex-column">
+              <div class="surface-50 flex justify-content-center border-round p-3">
+                <div class="relative mx-auto">
+                  <img class="border-round w-full" [src]="product.imagens[0].url" [alt]="product.modelo" style="max-width: 300px;" />
                 </div>
               </div>
+              <div class="pt-4">
+                <div class="flex flex-row justify-content-between align-items-start gap-2">
+                  <div>
+                    <span class="font-medium text-secondary text-sm">{{ product.marca }}</span>
+                    <div class="text-lg font-medium text-900 mt-1">{{ product.modelo }}</div>
+                  </div>
+                </div>
 
-              <div class="flex justify-content-start align-items-center mt-4">
-                <span>{{ product.ano }}</span>
-                <p-divider class="divider" type="solid" layout="vertical" />
-                <span>{{ product.combustivel }}</span>
-                <p-divider class="divider" type="solid" layout="vertical" />
-                <span>{{ product.quilometragem }} km</span>
-              </div>
+                <div class="flex justify-content-start align-items-center mt-4">
+                  <span>{{ product.ano }}</span>
+                  <p-divider class="divider" type="solid" layout="vertical" />
+                  <span>{{ product.combustivel }}</span>
+                  <p-divider class="divider" type="solid" layout="vertical" />
+                  <span>{{ product.quilometragem }} km</span>
+                </div>
 
-              <div class="flex flex-column gap-4 mt-4">
-                <span class="text-2xl font-semibold">{{ 'R$' + product.preco }}</span>
-                <!-- <div class="flex gap-2">
-                  <p-button icon="pi pi-shopping-cart" class="flex-auto md:flex-initial white-space-nowrap" label="Buy Now" />
-                  <p-button icon="pi pi-heart" [outlined]="true" />
-                </div> -->
+                <div class="flex flex-column gap-4 mt-4">
+                  <span class="text-2xl font-semibold">{{ 'R$' + product.preco }}</span>
+                  <!-- <div class="flex gap-2">
+                    <p-button icon="pi pi-shopping-cart" class="flex-auto md:flex-initial white-space-nowrap" label="Buy Now" />
+                    <p-button icon="pi pi-heart" [outlined]="true" />
+                  </div> -->
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-dataView>
+
+    <!-- skeleton loading -->
+    <ng-template #loadingList let-product pTemplate="grid" let-products>
+      <div class="grid grid-nogutter">
+        <div class="ccol-12 sm:col-6 md:col-4 xl:col-4 p-2" *ngFor="let i of counterArray(6)">
+          <div class="p-4 border-1 surface-border surface-card border-round">
+            <div class="flex flex-wrap align-items-center justify-content-between gap-2">
+              <p-skeleton styleClass="w-6rem border-round h-2rem" />
+              <p-skeleton styleClass="w-3rem border-round h-1rem" />
+            </div>
+            <div class="flex flex-column align-items-center gap-3 py-5">
+              <p-skeleton styleClass="w-9 border-round h-10rem" />
+              <p-skeleton styleClass="w-8rem border-round h-2rem" />
+              <p-skeleton styleClass="w-6rem border-round h-1rem" />
+            </div>
+            <div class="flex align-items-center justify-content-between">
+              <p-skeleton styleClass="w-4rem border-round h-2rem" />
+              <p-skeleton shape="circle" styleClass="w-3rem h-3rem" />
             </div>
           </div>
         </div>
       </div>
     </ng-template>
-  </p-dataView>
+  </section>
 
-  <!-- skeleton loading -->
-  <ng-template #loadingList let-product pTemplate="grid" let-products>
-    <div class="grid grid-nogutter">
-      <div class="ccol-12 sm:col-6 md:col-4 xl:col-4 p-2" *ngFor="let i of counterArray(6)">
-        <div class="p-4 border-1 surface-border surface-card border-round">
-          <div class="flex flex-wrap align-items-center justify-content-between gap-2">
-            <p-skeleton styleClass="w-6rem border-round h-2rem" />
-            <p-skeleton styleClass="w-3rem border-round h-1rem" />
-          </div>
-          <div class="flex flex-column align-items-center gap-3 py-5">
-            <p-skeleton styleClass="w-9 border-round h-10rem" />
-            <p-skeleton styleClass="w-8rem border-round h-2rem" />
-            <p-skeleton styleClass="w-6rem border-round h-1rem" />
-          </div>
-          <div class="flex align-items-center justify-content-between">
-            <p-skeleton styleClass="w-4rem border-round h-2rem" />
-            <p-skeleton shape="circle" styleClass="w-3rem h-3rem" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </ng-template>
-</section>
+</div>
+

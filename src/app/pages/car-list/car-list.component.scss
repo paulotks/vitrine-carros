@@ -5,3 +5,16 @@
 .car-card {
   cursor: pointer;
 }
+
+.list-container {
+  display: flex;
+  gap: 2em
+}
+
+.filter-container {
+  width: 25em; //remover isso aqui
+  .filter-title {
+    text-align: center;
+
+  }
+}
